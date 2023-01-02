@@ -1,0 +1,17 @@
+public class yönetici extends çalışan{
+    private int sorumlu_olduğu_kişi_sayısı;
+    public yönetici (String ad, String soyad,int id,int sorumlu_olduğu_kişi_sayısı){
+        super.çalışan(ad,soyad,id);
+        this.sorumlu_olduğu_kişi_sayısı=sorumlu_olduğu_kişi_sayısı;
+    }
+
+    @Override
+    public void bilgilerigöster() {
+        super.bilgilerigöster();
+        System.out.println("yöneticinin sorumlu olduğu kişi sayısı :" + sorumlu_olduğu_kişi_sayısı);
+    }public void zamyap(int zam_miktarı){
+        System.out.println(getAd() +" çalışanlara"+zam_miktarı +"kadar zam yapıyor...");
+
+    }
+}
+

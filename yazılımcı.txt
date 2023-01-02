@@ -1,0 +1,16 @@
+ipublic class yazılımcı extends çalışan {
+    private String diller ;
+    public yazılımcı(String ad,String soyad, int id, String diller){
+        super.çalışan(ad,soyad,id);
+        this.diller=diller;
+    }public void formatat(String işletim_sistemi){
+        System.out.println(getAd() + işletim_sistemi +" işletim sistemini  yüklüyor");
+    }
+
+    @Override
+    public void bilgilerigöster() {
+        super.bilgilerigöster();
+        System.out.println("yazılımcının bildiği diller.."+ diller);
+
+    }
+}

@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("çalışanlar programına hoşgeldiniz..");
+        String işlemler = "işlemler..\n"
+                +"1.yazılım işlemleri\n"
+                +"2.yönetici işlemleri\n"
+                +"çıkış için q 'ya basınız..\n";
+        System.out.println("*******************");
+        System.out.println(işlemler);
+        System.out.println("*******************");
+
+        while (true){
+            System.out.println("Lütfen yapmak istediğiniz işlemi seçiniz..");
+            String işlem = scanner.nextLine();
+            
+            if (işlem.equals("q")){
+                System.out.println("programdan çıkış yapılıyor..");
+                break;
+
+            } else if (işlem.equals("1")) {
+                yazılımcı yazılımcı = new yazılımcı("alican","kunt",123456,"java, pyhton");
+                String yazılımcı_işlemi = "1.format at\n"+"2.bilgileri göster\n"+"çıkış için q ya bas\n";
+                System.out.println(yazılımcı_işlemi);
+                while (true){
+                    System.out.println("yapıcağınız işlemi seçiniz..");
+                    String y_işlem = scanner.nextLine();
+                    if (y_işlem.equals("q")){
+                        System.out.println("programdan çıkış yapılıyor..");
+                        break;
+                    } else if (y_işlem.equals("1")) {
+                        System.out.print("işletim sistemi...");
+                        String işletim_sistemi = scanner.nextLine();
+                        yazılımcı.formatat(işletim_sistemi);
+
+                    } else if (y_işlem.equals("2")) {
+                        System.out.println("bilgileriniz");
+                        yazılımcı.bilgilerigöster();
+
+                    }else {
+                        System.out.println("geçersiz yazılımcı işlemi..");
+                    }
+                }
+                
+                
+            } else if (işlem.equals("2")) {
+                yönetici yönetici = new yönetici("mehmet","büyük",12378,20);
+                String yönetici_işlemleri = "çıkış için q ya basınız\n"+"1.bilgileri göster\n"+"2.zam yap";
+                System.out.println(yönetici_işlemleri);
+
+                while (true){
+                    System.out.println("yapmak istediğiniz işlemi seçiniz..");
+                    String işleminiz = scanner.nextLine();
+                    if (işleminiz.equals("q")){
+                        System.out.println("programdan çıkış yapılıyor..");
+                        break;
+                    } else if (işleminiz.equals("1")) {
+                        System.out.println("tüm bilgiler..");
+                        yönetici.bilgilerigöster();
+
+                    } else if (işleminiz.equals("2")) {
+                        System.out.println("yapıcağınız zam miktarını giriniz..");
+                        int zammiktarı = scanner.nextInt();
+                        scanner.nextLine();
+                        yönetici.zamyap(zammiktarı);
+
+                    }
+
+                }
+
+
+
+                
+            }
+        }
+
+
+    }
+}
